@@ -12,12 +12,14 @@
         <div class="container">
             <input type="button" value="Lire un chiffre entre (1-7)" id="lire" class="btn"/>
             <input type="number" id="valeurs" name="valeurs" value=0 height="20" width="50"/>
-            <select>
-                
+            <select id="language">
+                <option>FR</option>
+                <option>EN</option>
+                <option>NL</option>
             </select>
             <table id="tab"><th><hr>Valeurs<hr></th></table>
         </div>
         <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
-        <script src="js/jsonsemaine.js" type="text/javascript"></script>
+        <script src="js/jsonsemaineSeletors.js" type="text/javascript"></script>
     </body>
 </html>

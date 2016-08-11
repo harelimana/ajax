@@ -3,7 +3,7 @@ var dayIndex = 0;
 var dayName = " ";
 var pattron = /[1-7]/g;
 function queljour(week, dayIndex) {
-    var d = parseInt(day);
+    var d = parseInt(dayIndex);
     //   console.log(d);
     if (pattron.exec(d) !== false) {
         dayName = week[d];
