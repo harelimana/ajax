@@ -2,30 +2,41 @@
 
 var v = parseInt(0); // variable d'incrément dont la valeur est mise à zéro au début
 var result = parseInt(0); //variable de l'ID dans d'INPUT et dont sert l'affichage du LABEL
+var inscope = true;
 
-// fonctions d'itération
-
-function addition(v) {
-    return v++;
+function scopetest(v) {
+    if ((v >= 0) && (v <= 10)) {
+        inscope = true;
+    } else {
+        inscope = false;
+    }
+    return inscope;
 }
-function subtraction(v) {
-    return v--;
-}
-$(document).ready(function () {
-    var va = addition(v);
 
-    console.log(va + ' alex');
-    //la capture d'évenements lors du click
-    $('#increment').click(function (e) {
-         va++;
-        $(':input').val(va);
-        console.log(va + ' alex');
-    });
+inscope = scopetest(v);
+$('p').hide(); // the 'out of scope' error paragraph is hidden 
 
-    $('#decrement').click(function (e) {
-         va--;
-        $(':input').val(va);
-        console.log(va + ' alex');
+if (inscope) {
+    $(document).ready(function () {
+
+        //la capture d'évenements lors du click
+        $('#increment').click(function (e) {
+            $('#result').val(v);
+            ++v;
+            $('label').text(v);
+        });
+
+        $('#decrement').click(function (e) {
+            $('#result').val(v);
+            --v;
+            $('label').text(v);
+        });
+        console.log(inscope);
     });
-});
+} else {
+   
+    $('input').prop('desabled', true);
+    $('p').fadeIn('slow').delay('3000').fadeOut('slow'); // would like to fadein the 'out of scope' error paragraph
+    
+};
 

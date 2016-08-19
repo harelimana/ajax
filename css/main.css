@@ -1,8 +1,11 @@
-.error{
+
+.labelbox{
     background-color: lightpink;
 }
 
-#message{
-    position:absolute;
-    left:50%;
+.fl{
+    float: left;
+}
+.flc{
+    float: none;
 }
