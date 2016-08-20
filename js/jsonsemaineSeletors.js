@@ -36,9 +36,10 @@ function selectedWeek(week) {
 /* ==== espace d'appel à ajax et JSON ===== */
 
 $(document).ready(function () {
+    // ajouter (déplacer) ici l'appel à la fonction selected
     $('#lire').click(function (e) {
-        $.post('ajaxsemaineSeletors.php', function (data) {
-            var week = JSON.parse(data);
+        $.post('ajaxsemaineSeletors.php', function (data) { // passer en maraamètre la semaine choisie
+            var week = JSON.parse(data); // ce sera cette semaine-là qui est revoyée
             $("select").change(selectedWeek);//appel de la fonction selectedWeek()
             var wk = selectedWeek(week); // c'est ici l'appel
             dayIndex = $('#valeurs').val(); //lecture dans l'imput de la valeur correpondant au jour souhaité 
