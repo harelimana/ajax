@@ -20,7 +20,7 @@
                 <input type="button" value="-" id="decrement" class="btn"/>
             </div>
             <div class="flc"></div>
-            <div class="error"><p>Out of scope !</p></div>
+            <div class="error flc"><p>Out of scope !</p></div>
         </div> 
         <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>

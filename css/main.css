@@ -7,5 +7,7 @@
     float: left;
 }
 .flc{
-    float: none;
+    padding-top: 10px;
+    clear: both;
+    color: teal;
 }
